@@ -1,16 +1,21 @@
-# pomodoro
+# Flutter MacOS Pomodoro
 
-A new Flutter project.
+A complete pomodoro app for MacOS built in Flutter.
 
-## Getting Started
+Contains example code for basic window management, 
+shortcut and menu bar customization, notifications, storage 
+and playback.
 
-This project is a starting point for a Flutter application.
+A lot of the plugins used in this project are experimental.
 
-A few resources to get you started if this is your first Flutter project:
+## Custom Plugins
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+I had to build my own plugins for getting the miniaturization status
+of the window and bringing the window to the front of the screen, 
+(i.e, focusing on the window). Check it out!
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[window_activator](https://github.com/wilsonowilson/window_activator)
+
+## Screenshot
+
+![Screenshot](https://github.com/wilsonowilson/Flutter-Pomodoro/blob/master/meta/screenshot.png)
