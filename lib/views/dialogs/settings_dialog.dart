@@ -43,10 +43,9 @@ class _SettingsDialogState extends State<SettingsDialog> {
       errorMessage = 'Invalid time';
     } else {
       errorMessage = null;
-      // TODO: Change unit from seconds to minutes
       cubit.saveTimes(
-        int.parse(_workController.text),
-        int.parse(_relaxController.text),
+        int.parse(_workController.text) * 60,
+        int.parse(_relaxController.text) * 60,
       );
     }
     setState(() {});
