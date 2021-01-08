@@ -1,0 +1,70 @@
+PODS:
+  - audio_session (0.0.1):
+    - FlutterMacOS
+  - desktop_window (0.0.1):
+    - FlutterMacOS
+  - flutter_local_notifications (0.0.1):
+    - FlutterMacOS
+  - FlutterMacOS (1.0.0)
+  - just_audio (0.0.1):
+    - FlutterMacOS
+  - menubar (0.0.2):
+    - FlutterMacOS
+  - path_provider_macos (0.0.1):
+    - FlutterMacOS
+  - shared_preferences_macos (0.0.1):
+    - FlutterMacOS
+  - window_activator (0.1.0):
+    - FlutterMacOS
+  - window_size (0.0.2):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - audio_session (from `Flutter/ephemeral/.symlinks/plugins/audio_session/macos`)
+  - desktop_window (from `Flutter/ephemeral/.symlinks/plugins/desktop_window/macos`)
+  - flutter_local_notifications (from `Flutter/ephemeral/.symlinks/plugins/flutter_local_notifications/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - just_audio (from `Flutter/ephemeral/.symlinks/plugins/just_audio/macos`)
+  - menubar (from `Flutter/ephemeral/.symlinks/plugins/menubar/macos`)
+  - path_provider_macos (from `Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos`)
+  - shared_preferences_macos (from `Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos`)
+  - window_activator (from `Flutter/ephemeral/.symlinks/plugins/window_activator/macos`)
+  - window_size (from `Flutter/ephemeral/.symlinks/plugins/window_size/macos`)
+
+EXTERNAL SOURCES:
+  audio_session:
+    :path: Flutter/ephemeral/.symlinks/plugins/audio_session/macos
+  desktop_window:
+    :path: Flutter/ephemeral/.symlinks/plugins/desktop_window/macos
+  flutter_local_notifications:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_local_notifications/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  just_audio:
+    :path: Flutter/ephemeral/.symlinks/plugins/just_audio/macos
+  menubar:
+    :path: Flutter/ephemeral/.symlinks/plugins/menubar/macos
+  path_provider_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos
+  shared_preferences_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos
+  window_activator:
+    :path: Flutter/ephemeral/.symlinks/plugins/window_activator/macos
+  window_size:
+    :path: Flutter/ephemeral/.symlinks/plugins/window_size/macos
+
+SPEC CHECKSUMS:
+  audio_session: dea1f41890dbf1718f04a56f1d6150fd50039b72
+  desktop_window: fb7c4f12c1129f947ac482296b6f14059d57a3c3
+  flutter_local_notifications: 3805ca215b2fb7f397d78b66db91f6a747af52e4
+  FlutterMacOS: 57701585bf7de1b3fc2bb61f6378d73bbdea8424
+  just_audio: 1a11463e7e522bd4e8caa925b4247f1360cbe5a2
+  menubar: 4e3d461d62d775540277ce6639acafe2a111a231
+  path_provider_macos: a0a3fd666cb7cd0448e936fb4abad4052961002b
+  shared_preferences_macos: 480ce071d0666e37cef23fe6c702293a3d21799e
+  window_activator: fa2c3da6a22c55810234cb5f5207dcf93fa1071c
+  window_size: 339dafa0b27a95a62a843042038fa6c3c48de195
+
+PODFILE CHECKSUM: 6eac6b3292e5142cfc23bdeb71848a40ec51c14c
+
+COCOAPODS: 1.9.1

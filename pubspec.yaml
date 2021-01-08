@@ -1,0 +1,55 @@
+name: pomodoro
+description: A Desktop Pomodoro Timer.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  menubar:
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      path: plugins/menubar
+  window_size:
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
+  window_activator: ^0.2.0
+  just_audio: ^0.6.5
+  bloc: ^6.1.1
+  cupertino_icons: ^1.0.2
+  dartz: ^0.9.2
+  flutter_local_notifications: ^3.0.2
+  desktop_window: ^0.3.0
+  equatable: ^1.2.5
+  flutter_bloc: ^6.1.1
+  freezed: ^0.12.6
+  freezed_annotation: ^0.12.0
+  get_it: ^5.0.3
+  injectable: ^1.0.7
+  provider: ^4.3.2+3
+  shared_preferences: ^0.5.12+4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  build_runner: ^1.10.11
+  injectable_generator: ^1.0.7
+  very_good_analysis: ^1.0.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/
+    - audio/ding.mp3
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
+        - asset: fonts/Montserrat-Black.ttf
+          weight: 900
