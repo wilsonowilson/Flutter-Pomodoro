@@ -9,7 +9,7 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'service_modules.dart';
-import '../logic/settings_logic/settings_cubit_cubit.dart';
+import '../logic/settings_logic/settings_cubit.dart';
 import '../core/preferences_service.dart';
 import '../logic/timer_logic/timer_cubit.dart';
 
@@ -28,8 +28,7 @@ Future<GetIt> $initGetIt(
   gh.lazySingleton<StorageService>(
       () => StorageService(get<SharedPreferences>()));
   gh.factory<TimerCubit>(() => TimerCubit(get<StorageService>()));
-  gh.factory<SettingsCubitCubit>(
-      () => SettingsCubitCubit(get<StorageService>()));
+  gh.factory<SettingsCubit>(() => SettingsCubit(get<StorageService>()));
   return get;
 }
 

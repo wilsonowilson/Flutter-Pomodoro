@@ -8,6 +8,7 @@ import 'package:window_size/window_size.dart';
 import 'constants/color_constants.dart';
 import 'constants/size_constants.dart';
 import 'injection/injection.dart';
+import 'logic/settings_logic/settings_cubit.dart';
 import 'logic/timer_logic/timer_cubit.dart';
 import 'views/screens/home.dart';
 
@@ -35,17 +36,30 @@ void main() async {
 class Pomodoro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: primaryColor,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => getIt<TimerCubit>()..initTimes()),
+        BlocProvider(
+          create: (context) => getIt<SettingsCubit>()..getExistingTimes(),
         ),
-        fontFamily: 'Montserrat',
-      ),
-      home: BlocProvider(
-        create: (context) => getIt<TimerCubit>()..initTimes(),
-        child: HomeScreen(),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            backgroundColor: primaryColor,
+          ),
+          fontFamily: 'Montserrat',
+        ),
+        home: MultiBlocProvider(
+          providers: [
+            BlocProvider(create: (context) => getIt<TimerCubit>()..initTimes()),
+            BlocProvider(
+              create: (context) => getIt<SettingsCubit>()..getExistingTimes(),
+            ),
+          ],
+          child: HomeScreen(),
+        ),
       ),
     );
   }

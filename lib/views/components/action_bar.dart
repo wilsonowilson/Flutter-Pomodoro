@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/views/dialogs/settings_dialog.dart';
 import 'package:provider/provider.dart';
 
 import '../../constants/image_constants.dart';
@@ -11,28 +12,38 @@ class ActionBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final timer = context.watch<TimerCubit>();
     final isActive = timer.state.status == TimerStatus.active;
-    return Container(
-      width: 80,
-      height: double.maxFinite,
-      decoration: _getBarBackground(timer.state),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TimerActionButton(
-            icon: isActive ? Icons.pause_rounded : Icons.play_arrow_rounded,
-            onPressed: isActive ? timer.pauseTimer : timer.startTimer,
-          ),
-          const VerticalSpacing(20),
-          TimerActionButton(
-            icon: Icons.restore_rounded,
-            onPressed: timer.resetTimer,
-          ),
-          const VerticalSpacing(20),
-          TimerActionButton(
-            icon: Icons.skip_next,
-            onPressed: timer.nextCycle,
-          ),
-        ],
+    return GestureDetector(
+      onDoubleTap: () {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return SettingsDialog();
+          },
+        );
+      },
+      child: Container(
+        width: 80,
+        height: double.maxFinite,
+        decoration: _getBarBackground(timer.state),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TimerActionButton(
+              icon: isActive ? Icons.pause_rounded : Icons.play_arrow_rounded,
+              onPressed: isActive ? timer.pauseTimer : timer.startTimer,
+            ),
+            const VerticalSpacing(20),
+            TimerActionButton(
+              icon: Icons.restore_rounded,
+              onPressed: timer.resetTimer,
+            ),
+            const VerticalSpacing(20),
+            TimerActionButton(
+              icon: Icons.skip_next,
+              onPressed: timer.nextCycle,
+            ),
+          ],
+        ),
       ),
     );
   }

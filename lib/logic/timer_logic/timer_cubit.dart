@@ -22,8 +22,8 @@ class TimerCubit extends Cubit<TimerState> {
 
   void initTimes() {
     final times = _storage.getTimes();
-    final workTime = times.workTime ?? 10;
-    final restTime = times.restTime ?? 3;
+    final workTime = times.workTime ?? kWorkTime;
+    final restTime = times.restTime ?? kRestTime;
     emit(
       state.copyWith(
         duration: workTime,
